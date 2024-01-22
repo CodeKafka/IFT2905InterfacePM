@@ -1,4 +1,4 @@
-\documentclass[2pt]{report}
+\documentclass{report}
 \input{preamble.tex}
 \usepackage[scr]{rsfso}
 
@@ -36,7 +36,7 @@
 % Customizing the spacing for the chapter titles
 \titlespacing*{\chapter}{0pt}{0pt}{20pt}
 
-\usepackage[utopia]{mathdesign}
+%\usepackage[utopia]{mathdesign}
 % Allow hfill in math environment
 \newcommand{\specialcell}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\ignorespaces\fi}
 
@@ -51,7 +51,7 @@
 }
 
 \begin{document}
-\maketitle
+%\maketitle
 
 \pagebreak
 
@@ -79,6 +79,7 @@
              \textbf{critiquer}, \textbf{analyser} et \textbf{convervoir} interfaces.     
 
     \end{itemize}
+
 
 
     \paragraph{Causes d'échecs}
@@ -121,19 +122,19 @@
     l\textbf{'efficacité}, l\textbf{'efficience} et 
     la \textbf{satisfaction}.   
     \begin{itemize}
-        \item [$\rhd$] \textbf{ Efficacité} : atteindre le but \;  $\target$
-        \item[$\rhd$] \textbf{ Efficience} : \textit{effort} 
+        \item [$\rhd $] \textbf{ Efficacité} : atteindre le but \;  $\target$
+        \item [$\rhd $] \textbf{ Efficience} : \textit{effort} 
             et ou \textit{temps} \textbf{minimal} \; \showclock{0}{45} 
-        \item[$\rhd $] \textbf{ Satisfaction} :  
+        \item [$\rhd $] \textbf{ Satisfaction} :  
             évaluation subjective par $\mathcal{U}$
     \end{itemize}
 
     \paragraph{Où les desginer se trompent}  
     \begin{itemize}
-        \item[$\rhd$] Ne comprennet pas $\mathcal{U}$ et leurs limitations
-        \item[$\rhd$] Ne prévoient pas différents \textbf{contextes d'utilisation}  
-        \item[$\rhd$] Absence de \textbf{modèle détaillé} du fonct.        
-        \item[$\rhd$] Absence de \textbf{feedback} par l'objet.        
+      \item [$\rhd $] Ne comprennet pas $\mathcal{U}$ et leurs limitations
+      \item [$\rhd $] Ne prévoient pas différents \textbf{contextes d'utilisation}  
+      \item [$\rhd $] Absence de \textbf{modèle détaillé} du fonct.        
+      \item [$\rhd $] Absence de \textbf{feedback} par l'objet.        
     \end{itemize}
 
     \paragraph{Pourquoi le design est-il difficile}
@@ -147,22 +148,19 @@
     l'utiliser et quelles sont les opérations possibles. 
 
     \begin{itemize}
-        \item[$\rhd$]  \textbf{Affordance} ce que l'O permet de faire.  
+      \item [$\rhd $]  \textbf{Affordance} ce que l'O permet de faire.  
             Un \textit{signifiant} est un élément qui permet de rendre 
             \textbf{l'affordance} visible.   
-        \item[$\rhd$]  \textbf{Signifiants} indiquent que l'affordance 
+          \item [$\rhd $]  \textbf{Signifiants} indiquent que l'affordance 
             $\exists$ et ne doivent pas être \textbf{contradictoire}.   
 
-        \item[$\rhd$]  \textbf{Anti-affordance} permettent de masquer 
+          \item [$\rhd $]  \textbf{Anti-affordance} permettent de masquer 
             visibilité d'un aff. et contribue à la gestion d'erreur. 
 
-        \item[$\rhd$]   \textbf{Correspondance} Permet de faire 
+          \item [$\rhd $]   \textbf{Correspondance} Permet de faire 
             l'association lors de l'utilisation 
             (direction volume, mode \texttt{on}/\texttt{off})
     \end{itemize} 
-
-
-
     \end{multicols*}
 
 
