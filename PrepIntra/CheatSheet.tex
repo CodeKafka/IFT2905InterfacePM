@@ -5,6 +5,10 @@
 \input{preamble.tex}
 
 \usepackage{amsmath,amsthm,mathtools}
+\usepackage{titlesec}
+\usepackage{microtype}
+\definecolor{myblue}{RGB}{0,82,155}
+
 
 
 
@@ -35,11 +39,30 @@
 
             %%%%%%%%%%%%%%%%%  Sect.                          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{helvet}
-\titleformat{\chapter}
-  {\fontfamily{phv}\bfseries\huge} % format
-  {}                % label
-  {0pt}             % sep
-  {\color{myb}\huge}           % before-code
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{myblue}}
+  {\filleft%
+    \begin{tikzpicture}
+    \node[
+      outer sep=0pt,
+      text width=1.5cm,
+      minimum height=2cm,
+      fill=myblue,
+      font=\color{white}\fontsize{40}{50}\selectfont,
+      align=center
+      ] (num) {\thechapter};
+    \node[
+      rotate=90,
+      anchor=south,
+      font=\color{black}\Large\normalfont
+      ] at ([xshift=-5pt]num.west) {\textls[180]{\textsc{Section}}};  
+    \end{tikzpicture}%
+  }
+  {5pt}
+  {\titlerule[2.0pt]\vskip3pt\titlerule\vskip4pt\large\normalfont}
+
+\titleformat{\section}
+  {\normalfont\scshape}{\thesection}{1em}{}
 
 
 
@@ -75,6 +98,8 @@
 
     \footnotesize
     %\section*{Design of everyday things}
+
+    \chapter{\textsc{Why Design fails \& Design of Everyday Things}}
 
 
     \paragraph{Mythe de l'erreur humaine} $\mathcal{H}$   
@@ -287,6 +312,9 @@
   .2 Questions clés pour un bon design.
   }
 
+
+    \chapter{Design Centré sur $\mathcal{U}$}
+
     \paragraph{Risque du modèle en cascade}
     Il permet de s'assurer que les implémentation sont  
     \textit{conformes aux engiences}, mais ne garantit pas qu'elles sont 
@@ -351,7 +379,6 @@
     \textit{besoin indentifiés} et aux contextes de l'utilisateur. 
     L'évaluation peut être effectué \textit{tôt} ou \textit{tard}, 
     selon le besoin. 
-    \columnbreak
 
 
     \paragraph{Identifier les parties intéressées}
@@ -365,6 +392,168 @@
     .2 qui doit en tirer profit?.
     .2 qui rendra votre vie misérable.
     }
+
+    \chapter{Évaluation heuristique}
+
+    \paragraph{Types d'erreurs}
+    \mbox{}\vspace{0.4em}
+  
+    \noindent$\blacktriangleright$
+    \textbf{Bévues} et \textbf{Lapsus} sonts causés par 
+        \textit{manque reflexion}  
+
+    \noindent  $\rhd$ \textbf{Bévues} $\looongrightarrow$ échec d'exécution.    
+
+    \noindent  $\rhd$ \textbf{Lapsus} $\looongrightarrow$ faille de 
+    mémoire lors de l'exec.  
+
+    \noindent $\rhd$ \textbf{Méprise} est un échec de mémoire et ou planif. P. ex., 
+        planifier procédures selon objectif, mais procédures utilsées 
+        ne mènent pas à l'objectif (méprise sur le choix de procédure). 
+
+
+    \dirtree{%
+    .1 Type d'erreurs.
+    .2 Erreur d'\textit{exécution}.  
+    .3 Lapsus. 
+    .4 Perte d'intention.
+    .4 Omission due à l'interruption. 
+    .4 Omission due à la satisfaction.
+    .3 Bévues. 
+    .4 De Capture.
+    .4 De Description.
+    .4 De Mode. 
+    .2 Méprises.
+    }
+
+    \noindent $\rhd$ \textbf{Erreur de capture} Survient 
+    lorsqu'un \textit{comportement fréquent} capture notre attention et 
+    nos action. P. ex. vouloir taper \texttt{facial recognition} sur 
+    Google et finir par naviguer sur facebook. 
+
+
+    \noindent $\rhd$ \textbf{Erreur de description} Survient 
+    lorsqu'une \textit{description} n'est pas suffisamment précise. 
+    P. ex. confondre les logos \texttt{Reply} et \texttt{Replay All}.    
+
+
+    \noindent $\rhd$ \textbf{Erreur de mode} Survient 
+    lorsqu'on utilise un \textit{contrôle} dans un contexte 
+    différent de celui qu'on souhaite. P. ex. utiliser 
+    \texttt{j} ou \texttt{k} dans d'autres application que \texttt{Vim}.
+    \columnbreak
+
+
+    \paragraph{Stratégies pour prévenir les erreurs}
+    \begin{itemize}
+      \item [$\rhd$ ] \textbf{Bévues }  Éviter actions aux démarches similaires
+      \item [$\rhd$ ] \textbf{Lapsus} Fonctions de \textit{forçage}   
+      \item [$\blacktriangleright$ ]  Obliger retrait carte ATM 
+        pour prendre \texttt{\$}  
+      \item [$\rhd$ ] \textbf{Erreur de mode} Éliminer mode 
+        ou $\uparrow$ \textit{visibilité} modes.   
+    \end{itemize}
+
+    \paragraph{Stratégies générales}
+    \begin{itemize}
+      \item [$\rhd$ ] Désactiver \textit{commandes illégales}  
+      \item [$\rhd$ ] Rendre informations \textit{nécessaires} visibles  
+      \item [$\rhd$ ] Préférer les listes déroulantes aux zones de texte 
+      \item [$\rhd$ ] Utiliser les \textit{dialogue de confirmation}  
+      \item [$\blacktriangleright$ ] Vous êtes sur le point de \texttt{rm -rf} !    
+    \end{itemize}
+
+    \paragraph{Contrôle par l'utilisateur et liberté}
+    L'interface doit encourager l'exporation en rendant les choses visibles 
+    et en assurant que les conséquences des erreurs ne soient pas sévères. 
+    \[ \text{Exploration } \implies \uparrow \text{ Découvrabilité}\]. 
+    
+
+    \noindent $\rhd {}$ S'il y a \textbf{automatisation}, les changements doivent 
+    aussi pouvoir être effectués manuellement. L'automatisation ne doit 
+    pas \texttt{override} l'autonomie de $\mathcal{U}$. Les saisies
+    \texttt{(input)} doivent être. Un $\mathcal{U}$ doit pouvoir 
+    créer, modifier, lire, mettre à jour et supprimer toute donnée. 
+    \textbf{modifiables}  
+    
+    \paragraph{Le droit d'annuler} implique que 
+    L'$\mathcal{U}$ doit pouvoir décider; les opérations doivent être annuables, 
+    et toutes boîtes de dialogue doit avoir un bouton d'annulation, pour ne pas 
+    \textbf{piéger}  
+
+    \section{Évaluation heuristique}
+    \paragraph{Avantages} Peut être fait rapidement, sans 
+    équipement, sans $\mathcal{U}$ et pour peu de \$. 
+
+
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{DixHeur.jpg}
+      \end{center}
+    \end{figure}
+
+    \paragraph{Étapes d'une évaluation heuristique}
+    \begin{itemize}
+      \item [$\rhd $] \textbf{Mise en place} préparation du matériel 
+        (scénarios, protoype, liste d'heuristiques)  
+      \item [$\rhd$ ] \textbf{Évaluation} pas exploration de l'interface, application 
+        des heuristiques génération de liste de problèmes
+      \item [$\rhd $] \textbf{Agrégation}  retour et discusson entre experts.
+    \end{itemize}   
+
+    \begin{note}{}{}
+      Il est important d'avoir \textbf{plusieurs évaluateurs} parce chacun d'eux peuvent 
+        identifier \textit{différents problèmes}  
+    \end{note}
+
+    \paragraph{Évaluation}
+    Il faut au moins \textbf{2 passages} par évaluation; le premier sert 
+    à découvrir le flux de la plateforme et le second permet de 
+    \textit{cibler} des éléments spécifiques.   
+
+    \noindent $\rhd$ \textbf{Liste de problèmes} est produite par l'évaluateur; 
+    il y mentionne \textit{l'heuristique qui est violée} et attribue 
+    un \textbf{cote} de gravité.   
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.15\textwidth]{CotteGravite.png}
+      \end{center}
+    \end{figure}
+    \vspace{-2em}
+
+    \noindent $\rhd$ \textbf{Impact du problème}   
+
+    \noindent $\rhd$ \textbf{Fréquence du problème}   
+
+
+    \paragraph{Marqueurs de bon design}
+    Les $\mathcal{U}$ n'attendent pas trop longtemps et on offre 
+    du \textit{feedback} (visibilité); on utilise des mots, symboles
+    et conventions
+    qui \textit{match} avec le monde réel, p.ex \textit{trashbin}; 
+    on \textit{ne force pas} l'utilisateur sur un chemin fixe; 
+    on permet la révision, correction, modification, supression; 
+    on \textit{rend les erreurs impossible} et valide les entrer; on s'assure 
+    que les tâche courantes se font de façon efficiente grâce aux 
+    accélérateurs de calvier et souris, abréviations, double-clic, raccourcis 
+    de menu et touches de fonction, etc.; on aide  
+    l'$\mathcal{U}$ à reconnaître, diagnostiquer et récupérer 
+    les erreurs; on offre de la documentation.
+
+
+
+    
+
+
+
+    
+
+
+
+
+
 
 
 
