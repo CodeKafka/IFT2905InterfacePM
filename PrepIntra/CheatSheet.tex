@@ -219,13 +219,15 @@
         \item [$\rhd$ ] \textbf{Feedback} permet d'indiquer à l'$\mathcal{U}$     
           l'effet de son action ou d'une interaction. 
 
-        \item [$\rhd$ ] \textbf{Modèle conceptuel} est une explication très simplifiée 
+        \item [$\rhd$ ] \textbf{\textcolor{red}{Modèle conceptuel}}
+          est une explication très simplifiée 
           du fonctionnement d'un élément. 
           \begin{itemize}
             \item [$\blacktriangleright$ ] \textbf{Modèle fonctionnel} : on sait \textit{quoi} 
               faire sans savoir \textit{pourquoi} ça marche       
             \item [$\blacktriangleright$ ] \textbf{Modèle structurel} : on connait 
               les composants et leurs interactions
+            \item[ $\rhd$] Exemple : \textit{Chinese mystery pot}  
           \end{itemize}
         
     \end{itemize} 
@@ -441,8 +443,6 @@
     lorsqu'on utilise un \textit{contrôle} dans un contexte 
     différent de celui qu'on souhaite. P. ex. utiliser 
     \texttt{j} ou \texttt{k} dans d'autres application que \texttt{Vim}.
-    \columnbreak
-
 
     \paragraph{Stratégies pour prévenir les erreurs}
     \begin{itemize}
@@ -535,38 +535,157 @@
     qui \textit{match} avec le monde réel, p.ex \textit{trashbin}; 
     on \textit{ne force pas} l'utilisateur sur un chemin fixe; 
     on permet la révision, correction, modification, supression; 
-    on \textit{rend les erreurs impossible} et valide les entrer; on s'assure 
+    on \textit{rend les erreurs impossible} et valide les entrer; 
+    on s'assure 
     que les tâche courantes se font de façon efficiente grâce aux 
-    accélérateurs de calvier et souris, abréviations, double-clic, raccourcis 
+    accélérateurs de calvier et souris, abréviations, double-clic,
+    raccourcis 
     de menu et touches de fonction, etc.; on aide  
     l'$\mathcal{U}$ à reconnaître, diagnostiquer et récupérer 
     les erreurs; on offre de la documentation.
 
 
+    \chapter{Design centré sur les tâches}
+
+    \paragraph{Persona}
+    Représentation symbolique de $l'\mathcal{U}$ décrivant 
+    ses caractéristique et les \textit{tâches} qu'il doit 
+    accomplir. 
+
+     \paragraph{Parties intéressées \textit{Stakeholders}  }
+     Réfère à toute personne ayant une 
+     \textbf{raison} de se soucier à l'interface.   
+     \begin{itemize}
+       \item [$\rhd$ ] Souvent nombreux 
+         \begin{itemize}
+           \item [$\blacktriangleright $] Les $\mathcal{U}$ 
+           \item [$\blacktriangleright $] Les \texttt{dev.}  
+           \item [$\blacktriangleright $] Les constructeurs 
+           \item [$\blacktriangleright $] Les sponsors 
+         \end{itemize}
+       \item [$\rhd$ ] Intérêts parfois en conflits
+         \begin{itemize}
+           \item [$\blacktriangleright $] Ces efficience, utilité 
+           \item [$\blacktriangleright $] Facilité de dev. 
+           \item [$\blacktriangleright $] Facilité de construction 
+           \item [$\blacktriangleright $] Coût de financement 
+         \end{itemize}
+     \end{itemize}
+     \noindent
+     \section{Workflow du design centré sur les tâches}
+     \texttt{
+       Identification $\looongrightarrow$ 
+       Exigences $\looongrightarrow$ 
+       Design Conceptuel $\looongrightarrow$ 
+       Parcour cognitif
+     }  
+
+     \paragraph{Identification}
+     Identifier l'$\mathcal{U}$; analyser des \textit{exemples de
+     tâche} 
+
+     \paragraph{Exigences}
+     Décider quelles tâches le design soutiendra.    
+    \begin{note}{}{}
+      Il \textit{faut} décrire les tâches à l'aide 
+      \textbf{d'exemple de tâches imaginées}  pour pavenir 
+      à déterminer les exigences. Les tâches peuvent être 
+      décrites par leur fréquence et leur importance. 
+    \end{note}
+
+    \textbf{En pratique}, pour identifier les tâches, on peut 
+    contacter les potentiels $\mathcal{U}$ et discuter 
+    avec eux du fonctionnement du système pour avoir  
+    leur feedback. Il faut demander à l'$\mathcal{U}$
+    de réviser les exemples de tâches : 
+    \begin{itemize}
+      \item [$\rhd$ ] Omissions 
+      \item [$\rhd$ ] Corrections
+      \item [$\rhd$ ] Clarifications
+      \item [$\rhd$ ] Suggestions
+    \end{itemize}
+
+
+    \paragraph{Clarification de la distinction tâche-activité}
+    Dans le 
+    \textit{design centré sur les tâches}, 
+    le mot \textit{tâche}  
+    a une signification plus proche du mot 
+    \textbf{activité}, puisque le design comprends 
+    prend en compte une grande quantité de tâche et leur 
+    contexte d'exécution. 
+
+
+    \paragraph{Bon exemples de tâches} 
+    Ils sont décrivent \textbf{quoi} sans extrapoler 
+    \textbf{comment}; il sont 
+    \textit{spécifiques}; ils sont \textit{exhaustif} et décrivent 
+    le travail de l'$\mathcal{U}$ dans son ensemble ainsi que 
+    la transmission globale de l'information. 
+    Dans l'ensemble, 
+    ils reflètent les intérêt des vrais $\mathcal{U}$. 
+
+     \paragraph{Design conceptuel}
+      Décrire la base d'interaction et de représentation 
+      (modèle mental). On utilise un \textbf{scénario} :
+
+      \[ \texttt{tâche + design } = \texttt{scénario}    \]
+    Le scénario montre comment une tâche est gérée par le 
+    design. 
+
+    \begin{align*}
+      &\textbf{Tâche } \colon 
+          \texttt{Elle choisit une recette dans la liste} \\
+      &\textbf{Scénario} \colon     
+          \texttt{Elle fait \textcolor{myg}{défiler la liste} 
+        d'images} \\ 
+      &\texttt{et \textcolor{myg}{tape sur}\dots  }  
+    \end{align*}        
+
+
+    \paragraph{Parcours cognitf}
+    Parcourir le tâches \textit{pas à pas} en utilisant le 
+    design et \textbf{évaluer}.   
+
+
+    \paragraph{Avantages de design centré sur les tâches}
+    \begin{itemize}
+      \item [$\blacktriangleright$ ] Permet de baser le design 
+        sur $\mathcal{U}$ et \textit{tâches réelles}  
+      \item [$\blacktriangleright$ ] Permet d'identifier les 
+        exigences lors de la \textit{phase pré-design} 
+        (avant même design conceptuel). 
+    \end{itemize}
+
+    \chapter{Les exigenbces du design}
+
+
+    \paragraph{Types d'exigences}
+    \begin{itemize}
+      \item [$\rhd$ ] \textbf{Fonctionnelle} : ce que le produit 
+        doit faire
+       \item [$\rhd$ ] \textbf{De données} : caractéristiques des 
+         données requises 
+      \item [$\rhd$ ] \textbf{D'environnement}  :  Contexte
+        physique 
+        et non physique nécessaires au fonctionnement. 
+      \item [$\rhd$ ] \textbf{Propres à l'$\mathcal{U}$}   
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] P. ex. une 
+            \textit{mère célibataire}  
+        \end{itemize}
+
+    \end{itemize}
+
 
     
 
 
 
-    
 
+     
 
-
-
-
-
-
-
-
-
-    
-    
 
     \end{multicols*}
-
-
-
-
- 
 
 \end{document}
