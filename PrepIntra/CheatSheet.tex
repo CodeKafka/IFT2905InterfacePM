@@ -657,25 +657,324 @@
         (avant même design conceptuel). 
     \end{itemize}
 
-    \chapter{Les exigenbces du design}
+    \chapter{Les exigences du design}
 
 
     \paragraph{Types d'exigences}
     \begin{itemize}
       \item [$\rhd$ ] \textbf{Fonctionnelle} : ce que le produit 
         doit faire
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] $\mathcal{U}$ 
+            \textcolor{myg}{chosit 
+            une recette} \textit{sur le site}.
+        \end{itemize}
        \item [$\rhd$ ] \textbf{De données} : caractéristiques des 
          données requises 
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] $\mathcal{U}$ chosit 
+            une recette sur le site en regardant une 
+            \textcolor{myg}{liste}  
+        \end{itemize}
       \item [$\rhd$ ] \textbf{D'environnement}  :  Contexte
         physique 
         et non physique nécessaires au fonctionnement. 
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] P. ex. 
+            une \textit{mère célibataire qui 
+            \textcolor{myg}{travaille à domicile}}  
+        \end{itemize}
       \item [$\rhd$ ] \textbf{Propres à l'$\mathcal{U}$}   
         \begin{itemize}
           \item [$\blacktriangleright$ ] P. ex. une 
-            \textit{mère célibataire}  
+            \textit{\textcolor{myg}{mère célibataire}} 
+            \textit{a des \textcolor{myg}{enfants}} 
+            qu'elle garde \textit{\textcolor{myg}{à la maison}}  
+            lorsqu'elle navigue sur le site. 
+        \end{itemize}
+      \item[$\rhd $] \textbf{De but d'utilisabilité ou d'expérience 
+        $\mathcal{U}$}
+        \begin{itemize}
+          \item [$\blacktriangleright $] Elle navigue sur le site 
+            et \textit{trouve un recette \textcolor{myg}{pour 
+            préparer évènement spécial}}  
         \end{itemize}
 
+        \paragraph{Comment identifier les exigences}
+        En théorie, il faut trouver :
+
+        \begin{itemize}
+          \item [$\rhd $] Les besoin humains
+          \item [$\rhd $] Les $\mathcal{U}$ et parties intéressées
+          \item [$\rhd $] Les niveaux de supports nécessaires
+            (à l'aide des \textbf{métriques})
+        \end{itemize}
+
+        \paragraph{Les métriques}
+        Elles aident à identifier le niveau de support 
+        nécessaire (l'attention et les ressources à accoder) 
+        sur un aspect du produit. 
+        \begin{itemize}
+          \item [$\rhd $] \textbf{Qualitatives}  
+            \begin{itemize}
+              \item [$\blacktriangleright$] 
+                Historisque des impressions et frustrations
+              \item [$\blacktriangleright$]
+                État actuel des impressions et frustrations
+              \item [$\blacktriangleright$]
+                Documentation des incidents critiques
+              \item [$\blacktriangleright$]
+                Effet viral
+              \item [$\blacktriangleright$]
+                \textbf{P}ossibilité de personaliser, 
+                \textbf{R}écupération d'erreur, 
+                \textbf{R}étention des compétences acquises,     
+                \textbf{F}acilité de réorganiser des activités, 
+                etc. 
+            \end{itemize}
+          \item [$\rhd $] \textbf{Quantitatives}  
+            \begin{itemize}
+               \item [$\blacktriangleright$] 
+                 \textbf{Vitesse}               
+              \item [$\blacktriangleright$]
+                \textbf{Taux d'erreur}  
+              \item [$\blacktriangleright$]
+                \textbf{Simplicité d'apprentissage}
+              \item [$\blacktriangleright$]
+                \textbf{Facilité d'utilisation}
+            \end{itemize}
+        \end{itemize}
+
+
+    \paragraph{Astuce pour les formulaires d'inscription}
+
+
+    \begin{itemize}
+      \item Cacher les affordances causant des erreurs 
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] P. ex. bouton pour 
+            \texttt{réinitialiser} les entrées du formulaire  
+        \end{itemize}
+
+      \item Utiliser un \texttt{label} plutôt qu'un 
+        \texttt{placeholder}    
+      \begin{itemize}
+        \item [$\blacktriangleright$ ] Le texte du 
+          \texttt{placeholder} disparaît;    
+        \item [$\blacktriangleright$ ]
+          Il a un mauvais constraste 
+        \item [$\blacktriangleright$ ]
+          Ne permet pas à $\mathcal{U}$ de valider son entrée   
+        \item [$\blacktriangleright$ ]
+          Nécessite mémoire à court terme de $\mathcal{U}$
+        \item [$\blacktriangleright$ ]
+          Les $\mathcal{U}$ peuvent confondre la texte 
+          du \texttt{placeholder} avec une info entrée   
+        \item [$\blacktriangleright$ ]
+          etc. 
+          \begin{figure}[H]
+          \begin{center}
+            \includegraphics[width=0.25\textwidth]{placeholder.png}
+          \end{center}
+        \end{figure}
+        
+      \end{itemize}
+      \item \textbf{Expliquer toutes les exigences d'entrées}  
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] P. ex. \texttt{mdp} 
+            doit contenir des caractères spéciaux
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{Formulaire1.png}
+      \end{center}
+    \end{figure}
+        \end{itemize}
     \end{itemize}
+      \item \textbf{Supprimer les champs optionnel
+        tant que possible}   
+    \begin{itemize}
+      \item Ne pas faire un sondage lors de 
+        \texttt{sign-up}  
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{Fo2.png}
+      \end{center}
+    \end{figure}
+    \end{itemize}
+
+
+      \item \textbf{Indiquer clairement quel champssont optionnel}   
+    \begin{itemize}
+      \item  P. ex. avec astérix
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{Fo3.png}
+      \end{center}
+    \end{figure}
+    \end{itemize}
+
+
+  \item \textbf{Faire correspondre les champs 
+    au type et à la taille de l'entrée} 
+    \begin{itemize}
+      \item
+      P. ex. éviter les listes déroulantes 
+        lorsqu'il y a peu d'options
+        Préférer les \texttt{radio button}  
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{Formulaire4.png}
+      \end{center}
+    \end{figure}
+    \end{itemize}
+
+    \chapter{Modèles conceptuels ($\mathbb{MC}$)}
+    
+    \paragraph{Rappel}
+    Il s'agit de l'idée que l'$\mathcal{U}$ se fait 
+    de la façon dont fonctionne un objet; sont modèle 
+    peut être \textit{fonctionnel} 
+    (c.-à-d. $\mathcal{U}$ sait \textcolor{red}{quoi} faire)  
+    ou \textit{structurel} (c.-à-d. $\mathcal{U}$ sait 
+    comment \texttt{\textcolor{red}{parts}} interagissent)  
+    $\mathbb{MC}$ peut être incomplet et quand même être 
+    précis/utile. 
+
+    \noindent
+    \paragraph{ Rappel : Modèle mentaux ($\mathbb{MM}$)}
+    Modèles que les gens se font du fonctionnement 
+    des objets qu'ils utilisent et qui leur permet 
+    de prédire le fonctionnement des 
+    futurs objets avec lesquels ils intéragiront. 
+
+    \begin{itemize}
+      \item [$\blacktriangleright$ ] En voyant une  
+        \textbf{paire de cisceaux}, nos $\mathbb{MM}$ nous 
+        permettent de déduire : affordances, signifiants, 
+        contraintes, correspondances, feedback, 
+        modèle conceptuel. 
+    \end{itemize}
+
+
+    \paragraph{Exécution et débogage d'un $\mathbb{MM}$}
+    Permet d'établir la relation de cause à effet 
+    entre \textcolor{red}{\texttt{action}} et sa 
+    \texttt{conséquence}; permet de faire 
+    des \textcolor{red}{\texttt{prédictions}} et de généreer des 
+    \textcolor{red}{\texttt{explications}} quant au 
+    fonctionnement. 
+
+
+    \paragraph{Sept étapes de l'action}
+    On parcous les 
+    \textbf{7 étapes} pour déboguer le $\mathbb{MM}$  
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.28\textwidth]{EtapesAction.png}
+      \end{center}
+    \end{figure}
+
+    \vspace{-2em}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.28\textwidth]{Action2.png}
+      \end{center}
+    \end{figure}
+
+
+    \paragraph{Caractéristiques d'un bon 
+    $\mathbb{MC}$}
+
+    \begin{itemize}
+      \item Basée sur les tâches 
+      \item Intuitif et cohérent 
+      \item Facile à apprendre
+      \item Utilise une terminologie claiure 
+    \end{itemize}
+
+
+    \paragraph{Éléments définissant un 
+    $\mathbb{MC}$}
+
+    \begin{itemize}
+    \item [$\rhd $] \textbf{Métaphores} : elles 
+      permettent de communiquer 
+      (intuitivement )à
+      $l'\mathbb{U}$ avec peu d'explication 
+     de quoi il 
+      s'agit
+      \begin{itemize}
+        \item [$\blacktriangleright$ ]
+          P. ex. bureau = \texttt{desktop}
+          $\implies$ un des espaces de 
+          travail principaux. 
+      \end{itemize}
+    \item [$\rhd$ ]
+      \textbf{Concept}, \textbf{actions}, 
+      \textbf{rôles de l'$\mathcal{U}$} et 
+      \textbf{attribus}. 
+     \item [$\rhd$ ]
+       \textbf{Correspondance entre les concepts et 
+       l'$\mathbb{UX}$}  
+    \item [$\rhd$ ] 
+      \textbf{Les types d'interactions}  
+    \item [$\rhd$ ]
+      \textbf{Les types d'interface}  
+    \end{itemize}
+
+
+    \paragraph{Exemple de métaphore}
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=0.35\textwidth]{Metaphore.png}
+      \end{center}
+    \end{figure}
+
+    \begin{itemize}
+      \item [$\rhd$ ] \textbf{Onglet} = \texttt{page}     
+      \item [$\rhd$ ] \textbf{contenu} = \texttt{texte}     
+      \item [$\rhd$ ] \textbf{Actions}     
+        \begin{itemize}
+          \item [$\blacktriangleright$ ]
+            Lire
+      \item [$\rhd$ ] \textbf{Onglet} = \texttt{page}     
+            Copier 
+      \item [$\rhd$ ] \textbf{Onglet} = \texttt{page}     
+            Ouvrir un nouvel onglet = nouvelle \texttt{page}  
+        \end{itemize}
+       \item [$\rhd$ ] \textbf{Comment}      
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] 
+            \texttt{mouse click}  
+          \item [$\blacktriangleright$ ] 
+            \texttt{keyboard}  
+        \end{itemize}
+    \end{itemize}
+    
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
+        
+
+
+
+
+    \end{itemize}
+
+
+
 
 
     
