@@ -1,0 +1,59 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}\textsc {Why Design fails \& Design of Everyday Things}}{2}{chapter.1}%
+\contentsline {paragraph}{Mythe de l'erreur humaine}{2}{paragraph*.1}%
+\contentsline {paragraph}{Principes de design}{2}{paragraph*.2}%
+\contentsline {paragraph}{Causes d'échecs}{2}{paragraph*.3}%
+\contentsline {paragraph}{Buts du $\mdmathbb {UX}$ | }{2}{paragraph*.4}%
+\contentsline {paragraph}{Définition de l'utilisabilité}{2}{paragraph*.5}%
+\contentsline {paragraph}{Où les desginer se trompent}{2}{paragraph*.6}%
+\contentsline {paragraph}{Pourquoi le design est-il difficile}{2}{paragraph*.7}%
+\contentsline {paragraph}{Principe de découvrabilité}{2}{paragraph*.8}%
+\contentsline {paragraph}{Les deux fossés d'interaction}{2}{paragraph*.9}%
+\contentsline {paragraph}{Les sept étape d'une actions}{2}{paragraph*.10}%
+\contentsline {paragraph}{Analyse de la cause originelle}{2}{paragraph*.11}%
+\contentsline {paragraph}{Septs questions garantissant l'atteinte de l'O}{2}{paragraph*.12}%
+\contentsline {chapter}{\numberline {2}Design Centré sur $\mathcal {U}$}{3}{chapter.2}%
+\contentsline {paragraph}{Risque du modèle en cascade}{3}{paragraph*.13}%
+\contentsline {paragraph}{Design itératif}{3}{paragraph*.14}%
+\contentsline {paragraph}{Modèle en spirale}{3}{paragraph*.15}%
+\contentsline {paragraph}{Design centré sur l'$\mathcal {U}$ }{3}{paragraph*.16}%
+\contentsline {paragraph}{Design}{3}{paragraph*.17}%
+\contentsline {paragraph}{Implémentations brouillons}{3}{paragraph*.18}%
+\contentsline {paragraph}{Évaluation}{3}{paragraph*.19}%
+\contentsline {paragraph}{Identifier les parties intéressées}{3}{paragraph*.20}%
+\contentsline {chapter}{\numberline {3}Évaluation heuristique}{3}{chapter.3}%
+\contentsline {paragraph}{Types d'erreurs}{3}{paragraph*.21}%
+\contentsline {paragraph}{Stratégies pour prévenir les erreurs}{3}{paragraph*.22}%
+\contentsline {paragraph}{Stratégies générales}{3}{paragraph*.23}%
+\contentsline {paragraph}{Contrôle par l'utilisateur et liberté}{3}{paragraph*.24}%
+\contentsline {paragraph}{Le droit d'annuler}{3}{paragraph*.25}%
+\contentsline {section}{\numberline {3.1}Évaluation heuristique}{3}{section.3.1}%
+\contentsline {paragraph}{Avantages}{3}{paragraph*.26}%
+\contentsline {paragraph}{Étapes d'une évaluation heuristique}{4}{paragraph*.28}%
+\contentsline {paragraph}{Évaluation}{4}{paragraph*.29}%
+\contentsline {paragraph}{Marqueurs de bon design}{4}{paragraph*.31}%
+\contentsline {chapter}{\numberline {4}Design centré sur les tâches}{4}{chapter.4}%
+\contentsline {paragraph}{Persona}{4}{paragraph*.32}%
+\contentsline {paragraph}{Parties intéressées \textit {Stakeholders} }{4}{paragraph*.33}%
+\contentsline {section}{\numberline {4.1}Workflow du design centré sur les tâches}{4}{section.4.1}%
+\contentsline {paragraph}{Identification}{4}{paragraph*.34}%
+\contentsline {paragraph}{Exigences}{4}{paragraph*.35}%
+\contentsline {paragraph}{Clarification de la distinction tâche-activité}{4}{paragraph*.36}%
+\contentsline {paragraph}{Bon exemples de tâches}{4}{paragraph*.37}%
+\contentsline {paragraph}{Design conceptuel}{4}{paragraph*.38}%
+\contentsline {paragraph}{Parcours cognitf}{4}{paragraph*.39}%
+\contentsline {paragraph}{Avantages de design centré sur les tâches}{4}{paragraph*.40}%
+\contentsline {chapter}{\numberline {5}Les exigences du design}{4}{chapter.5}%
+\contentsline {paragraph}{Types d'exigences}{4}{paragraph*.41}%
+\contentsline {paragraph}{Comment identifier les exigences}{4}{paragraph*.42}%
+\contentsline {paragraph}{Les métriques}{4}{paragraph*.43}%
+\contentsline {paragraph}{Astuce pour les formulaires d'inscription}{5}{paragraph*.44}%
+\contentsline {chapter}{\numberline {6}Modèles conceptuels ($\mdmathbb {MC}$)}{5}{chapter.6}%
+\contentsline {paragraph}{Rappel}{5}{paragraph*.50}%
+\contentsline {paragraph}{ Rappel : Modèle mentaux ($\mdmathbb {MM}$)}{5}{paragraph*.51}%
+\contentsline {paragraph}{Exécution et débogage d'un $\mdmathbb {MM}$}{5}{paragraph*.52}%
+\contentsline {paragraph}{Sept étapes de l'action}{5}{paragraph*.53}%
+\contentsline {paragraph}{Caractéristiques d'un bon $\mdmathbb {MC}$}{5}{paragraph*.56}%
+\contentsline {paragraph}{Éléments définissant un $\mdmathbb {MC}$}{5}{paragraph*.57}%
+\contentsline {paragraph}{Exemple de métaphore}{5}{paragraph*.58}%
+\contentsfinish 
